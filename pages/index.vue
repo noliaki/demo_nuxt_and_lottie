@@ -6,15 +6,16 @@
 
 <script>
 import Lottie from '~/components/Lottie.vue';
+import animationData from '~/assets/SaCSS.json';
 
 export default {
   components: {
     Lottie
   },
-  asyncData() {
+  data() {
     return {
       lottieOptions: {
-        animationData: require(`~/assets/SaCSS.json`)
+        animationData
       }
     }
   }

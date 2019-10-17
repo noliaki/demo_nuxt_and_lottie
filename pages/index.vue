@@ -11,10 +11,12 @@ export default {
   components: {
     Lottie
   },
-  asyncData() {
+  async asyncData() {
+    const animationData = await import('~/assets/SaCSS.json')
+
     return {
       lottieOptions: {
-        animationData: require(`~/assets/SaCSS.json`)
+        animationData
       }
     }
   }
